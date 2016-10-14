@@ -1,2 +1,2 @@
-# Voxelized-Game-Engine-Project
+# Project Thingy
 Making a voxel-engine in Java.
