@@ -3,6 +3,8 @@ package com.voxel.voxelgame;
 import java.awt.Canvas;
 import javax.swing.JFrame;
 
+import com.voxel.voxelgame.graphics.Render;
+
 public class Display extends Canvas implements Runnable {
 private static final long serialVersionUID = 1L;
 	
@@ -13,6 +15,7 @@ public static final String TITLE = "VoxelGame Pre-Alpha 0.01";
 
 private Thread thread;
 private boolean running = false;
+private Render render;
 
 private void start () {
 if (running) return;
@@ -35,7 +38,16 @@ private void stop() {
 }
 public void run() {
 	while (running) {
+		tick();
+		render();
 	}
+}
+private void tick() {
+
+}
+
+private void render() {
+
 }
 public static void main(String[] args) {
 Display game = new Display();
